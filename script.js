@@ -1,3 +1,11 @@
+/* ブラウザのデフォルトのスクロール復元機能を手動に変更 */
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+/* スクロールをX軸0、Y軸0（一番上）に移動 */
+window.scrollTo(0, 0);
+
 // ページが読み込まれたら実行
 document.addEventListener('DOMContentLoaded', () => {
     console.log("大会サイトへようこそ！");
@@ -33,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         section.style.transition = 'all 0.6s ease-out';
         observer.observe(section);
     });
+
     //--- 機能3: ヘッダーが消えたり出たりするようにしたいな
     let lastScrollY = window.scrollY; // 前回のスクロール位置を保存
     const header = document.querySelector('.header-consist');
@@ -51,5 +60,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
 });
-
-
