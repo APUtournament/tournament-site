@@ -294,3 +294,90 @@ footer {
         width: 550px;
     }
 }
+
+/* 9. チームメンバーの紹介 */
+.member-showcase { margin-bottom: 50px; }
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+            margin-bottom: 60px;
+        }
+        .member-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.1);
+        }
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #00d4ff;
+        }
+        .role {
+            font-size: 0.85rem;
+            color: #00d4ff;
+            letter-spacing: 1px;
+            margin: 0 0 5px 0;
+        }
+        .name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+        }
+        .description {
+            font-size: 0.9rem;
+            color: #cccccc;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .sub-title {
+            color: #00d4ff;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            text-align: left;
+        }
+        /* 主要人物特化レイアウト */
+        .primary-card {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            text-align: left;
+        }
+        .primary-card .member-avatar {
+            width: 180px;
+            height: 180px;
+            margin-bottom: 0;
+            flex-shrink: 0; 
+        }
+        .primary-card .member-info { flex: 1; }
+        
+        /* モバイル対応（画面が狭くなった際に縦配置へ変更） */
+        @media (max-width: 768px) {
+            .primary-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .primary-card .description, .primary-card .sub-title {
+                text-align: left;
+            }
+        }
+
