@@ -1,7 +1,7 @@
 /* 1. 使用フォント（修正が必要） */
 @font-face {
     font-family: 'KouzanMouhitsu';
-    src: url('./fonts/KouzanMouhituFontOTF.woff2') format('woff2');
+    src: url('./fonts/YujiSyuku-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
