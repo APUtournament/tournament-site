@@ -226,6 +226,14 @@ footer a {
     animation: write-slogan 1.5s ease-in-out forwards; 
 }
 
+.slogan-large {
+    font-size: 1.3em;
+}
+
+.slogan-normal {
+    font-size: 0.9em;
+}
+
 /* 7. アニメーション（登場順制御） */
 @keyframes write-slogan {
     0% { stroke-dashoffset: 1000; fill: transparent; filter: none; }
