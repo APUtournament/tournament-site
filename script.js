@@ -44,8 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //--- 機能3: ヘッダーが消えたり出たりするようにしたいな
     let lastScrollY = window.scrollY; // 前回のスクロール位置を保存
-    const header = document.querySelector('.header-consist');
+    const header = document.querySelector('.header-css');
     window.addEventListener('scroll', () => {
+        if (!header) return;
+        
         const currentScrollY = window.scrollY;
 
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -59,4 +61,89 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollY = currentScrollY; // 現在の位置を保存して次回比較に使う
     });
     
+    // これを見つけたらランデブーにメッセージをしてください　：D
+    (function() {
+        let k = "";
+        let cnt = 0;
+        let pcOk = false;
+        let tmr = null;
+
+        const t = atob("d2UgYXJlIGdhbWVycw==");
+        const a = document.getElementById("adv-1");
+        const f = document.getElementById("ft-logo");
+
+        const n = atob("QVBVIEdhbWVycyBsb2dvLnBuZw==");
+        const o = atob("QVBVIGVzcG9ydHMgbG9nby5wbmc=");
+
+        if (!a || !f) return;
+
+        function ex(s, d) {
+            const sound = new Audio("dewai.mp3"); 
+            sound.play().catch(e => console.log("Audio failed:", e));
+            
+            setTimeout(() => {
+                f.classList.add("logo-pop");
+                
+                setTimeout(() => {
+                    f.src = s;
+                }, 500);
+                
+                setTimeout(() => {
+                    f.classList.remove("logo-pop");
+                }, 1000);
+                
+                setTimeout(() => {
+                    f.classList.add("logo-pop");
+                    
+                    setTimeout(() => {
+                        f.src = o;
+                        a.style.cursor = "default";
+                    }, 500);
+                    
+                    setTimeout(() => {
+                        f.classList.remove("logo-pop");
+                    }, 1000);
+                }, d);
+
+            }, 1000);
+        }
+
+        function resetState() {
+            cnt = 0;
+            pcOk = false;
+            clearTimeout(tmr);
+        }
+
+        document.addEventListener("keydown", function(e) {
+            k += e.key;
+            if (k.length > t.length) {
+                k = k.slice(-t.length);
+            }
+            if (k === t) {
+                pcOk = true;
+                a.style.cursor = "pointer";
+                cnt = 0;
+            }
+        });
+
+        a.addEventListener("click", function() {
+            if (pcOk) {
+                ex(n, 10000);
+                resetState();
+                return;
+            }
+
+            cnt++;
+            clearTimeout(tmr);
+
+            if (cnt >= 10) {
+                ex(n, 5000);
+                resetState();
+            } else {
+                tmr = setTimeout(() => {
+                    cnt = 0;
+                }, 1000);
+            }
+            });
+    })();
 });
