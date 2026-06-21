@@ -82,28 +82,29 @@ document.addEventListener('DOMContentLoaded', () => {
             const sound = new Audio("sound.mp3"); 
             sound.play().catch(e => console.log("Audio failed:", e));
             
+            // 첫 번째 애니메이션 시작을 위한 클래스 추가 (복구됨)
+            f.classList.add("logo-pop");
+            
+            setTimeout(() => {
+                f.src = s;
+            }, 1000);
+            
+            setTimeout(() => {
+                f.classList.remove("logo-pop");
+            }, 2000);
+            
+            setTimeout(() => {
+                f.classList.add("logo-pop");
+                
                 setTimeout(() => {
-                    f.src = s;
+                    f.src = o;
+                    a.style.cursor = "default";
                 }, 1000);
                 
                 setTimeout(() => {
                     f.classList.remove("logo-pop");
                 }, 2000);
-                
-                setTimeout(() => {
-                    f.classList.add("logo-pop");
-                    
-                    setTimeout(() => {
-                        f.src = o;
-                        a.style.cursor = "default";
-                    }, 1000);
-                    
-                    setTimeout(() => {
-                        f.classList.remove("logo-pop");
-                    }, 2000);
-                }, d);
-
-            );
+            }, d);
         }
 
         function resetState() {
