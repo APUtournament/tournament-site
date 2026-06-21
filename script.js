@@ -87,11 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 setTimeout(() => {
                     f.src = s;
-                }, 500);
+                }, 1000);
                 
                 setTimeout(() => {
                     f.classList.remove("logo-pop");
-                }, 1000);
+                }, 2000);
                 
                 setTimeout(() => {
                     f.classList.add("logo-pop");
@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(() => {
                         f.src = o;
                         a.style.cursor = "default";
-                    }, 500);
+                    }, 1000);
                     
                     setTimeout(() => {
                         f.classList.remove("logo-pop");
-                    }, 1000);
+                    }, 2000);
                 }, d);
 
             }, 1000);
