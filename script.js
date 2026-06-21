@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!a || !f) return;
 
         function ex(s, d) {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
             const sound = new Audio("dewai.mp3"); 
             sound.play().catch(e => console.log("Audio failed:", e));
             
