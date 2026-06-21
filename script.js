@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function ex(s, d) {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            const sound = new Audio("dewai.mp3"); 
+            const sound = new Audio("sound.wav"); 
             sound.play().catch(e => console.log("Audio failed:", e));
             
             setTimeout(() => {
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 2000);
                 }, d);
 
-            }, 1000);
+            },);
         }
 
         function resetState() {
