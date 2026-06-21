@@ -79,12 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function ex(s, d) {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            const sound = new Audio("sound.wav"); 
+            const sound = new Audio("sound.mp3"); 
             sound.play().catch(e => console.log("Audio failed:", e));
             
-            setTimeout(() => {
-                f.classList.add("logo-pop");
-                
                 setTimeout(() => {
                     f.src = s;
                 }, 1000);
@@ -106,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 2000);
                 }, d);
 
-            },);
+            );
         }
 
         function resetState() {
