@@ -1,0 +1,138 @@
+/* 기본 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+.bg-color {
+    background-color: rgba(0, 0, 0, 0.85); /* 가독성을 위해 배경을 조금 더 어둡게 처리 */
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.top-padding {
+    padding-top: 60px;
+}
+
+/* 레이아웃 및 섹션 */
+.info-section {
+    padding-left: 5%;  
+    padding-right: 5%; 
+    max-width: 1000px; 
+    margin: 0 auto;    
+    margin-bottom: 60px; 
+}
+
+.info-section > h2 {
+    color: white;
+    border-left: 5px solid #ff0000;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* 스폰서 스타일링 */
+.sponsor-subtitle {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 50px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.sponsor-tier {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.sponsor-tier h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+/* 등급별 하단 포인트 라인 */
+.top h2 { color: #ffffff; border-bottom: 3px solid #ffffff; }
+.gold h2 { color: #d4af37; border-bottom: 3px solid #d4af37; }
+.silver h2 { color: #a0a0a0; border-bottom: 3px solid #a0a0a0; }
+.supporter h2 { color: #cd7f32; border-bottom: 3px solid #cd7f32; }
+
+/* 그리드 및 아이템 */
+.sponsor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.sponsor-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+.sponsor-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 등급별 로고 박스 크기 제어 */
+.top .sponsor-item {
+    width: 100%;
+    max-width: 750px;
+    height: 300px;
+}
+
+.gold .sponsor-item {
+    width: calc(50% - 15px); /* 2열 배치 대응 */
+    max-width: 480px;
+    height: 240px;
+}
+
+.silver .sponsor-item {
+    width: calc(33.333% - 20px); /* 3열 배치 대응 */
+    max-width: 280px;
+    height: 150px;
+}
+
+.supporter .sponsor-item {
+    width: calc(25% - 23px); /* 4열 배치 대응 */
+    max-width: 210px;
+    height: 120px;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #000;
+    font-size: 0.8rem;
+    color: white;
+}
+
+/* 반응형 모바일 대응 */
+@media (max-width: 768px) {
+    .info-section > h2 { font-size: 24px; }
+    .sponsor-subtitle { font-size: 0.95rem; }
+    
+    .sponsor-grid { gap: 15px; }
+    
+    .top .sponsor-item { max-width: 100%; height: 180px; }
+    .gold .sponsor-item { width: 100%; max-width: 100%; height: 180px; }
+    .silver .sponsor-item { width: calc(50% - 8px); height: 110px; }
+    .supporter .sponsor-item { width: calc(50% - 8px); height: 90px; }
+}
