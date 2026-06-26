@@ -5,13 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oita×APU Asia-Pacific e-Sports Tournament 2026 - SPONSOR</title>
     <link rel="stylesheet" href="tournament.css">
+    <style>
+        /* 깃허브 서버 및 모바일 환경에서도 정렬이 무조건 유지되도록 인라인 스타일 보완 */
+        .sponsor-grid-custom {
+            display: flex !important;
+            flex-wrap: nowrap !important; /* 한 줄에 강제 고정 */
+            justify-content: center !important;
+            gap: 20px !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        /* 골드: 한 줄에 2개 (정확히 50%씩 분할) */
+        .gold-item-custom {
+            width: calc(50% - 10px) !important;
+            max-width: 500px !important;
+        }
+
+        /* 실버: 한 줄에 3개 (정확히 33.33%씩 분할) */
+        .silver-item-custom {
+            width: calc(33.333% - 14px) !important;
+            max-width: 250px !important;
+        }
+
+        /* 서포터: 텍스트 전용 스타일링 */
+        .supporter-text-container {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 30px !important;
+            padding: 20px !important;
+        }
+
+        .supporter-text-item {
+            font-size: 1.2rem !important;
+            font-weight: bold !important;
+            color: #ffffff !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .supporter-text-item:hover {
+            color: #cd7f32 !important; /* 마우스 올렸을 때 서포터 고유 색상으로 변경 */
+        }
+
+        /* 모바일 화면에서 로고가 너무 작아지는 것을 방지하기 위한 최소 높이 설정 */
+        @media (max-width: 768px) {
+            .sponsor-grid-custom {
+                flex-wrap: wrap !important; /* 모바일 기기 크기에서는 자연스럽게 떨어지도록 조절 */
+            }
+            .gold-item-custom {
+                width: calc(50% - 10px) !important;
+                height: 140px !important;
+            }
+            .silver-item-custom {
+                width: calc(33.333% - 14px) !important;
+                height: 90px !important;
+            }
+            .supporter-text-item {
+                font-size: 1rem !important;
+            }
+        }
+    </style>
 </head>
 <body class="body-css">
 
     <header>
         <div class="header-css" style="justify-content: center !important; flex-direction: row !important; padding: 10px 0 !important; max-height: 80px !important;">
             <img src="APAC  透過.png" alt="大会アイコン" width="100" style="margin: 0 auto !important;">
-            </div>
+        </div>
     </header>
 
     <main class="bg-color text-white top-padding" style="min-height: 100vh; box-sizing: border-box;">
@@ -36,11 +98,11 @@
 
             <div class="sponsor-tier gold">
                 <h2 style="border-left: none !important; padding-left: 0 !important;">GOLD SPONSOR</h2>
-                <div class="sponsor-grid">
-                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item">
+                <div class="sponsor-grid-custom">
+                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item gold-item-custom">
                         <img src="Logos/company logo example.svg" alt="ゴールドスポンサー 1" width="500" height="200">
                     </a>
-                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item">
+                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item gold-item-custom">
                         <img src="Logos/company logo example.svg" alt="ゴールドスポンサー 2" width="500" height="200">
                     </a>
                 </div>
@@ -48,14 +110,14 @@
 
             <div class="sponsor-tier silver">
                 <h2 style="border-left: none !important; padding-left: 0 !important;">SILVER SPONSOR</h2>
-                <div class="sponsor-grid">
-                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item">
+                <div class="sponsor-grid-custom">
+                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item silver-item-custom">
                         <img src="Logos/company logo example.svg" alt="シルバースポンサー 1" width="250" height="100">
                     </a>
-                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item">
+                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item silver-item-custom">
                         <img src="Logos/company logo example.svg" alt="シルバースポンサー 2" width="250" height="100">
                     </a>
-                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item">
+                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item silver-item-custom">
                         <img src="Logos/company logo example.svg" alt="シルバースポンサー 3" width="250" height="100">
                     </a>
                 </div>
@@ -63,19 +125,11 @@
 
             <div class="sponsor-tier supporter">
                 <h2 style="border-left: none !important; padding-left: 0 !important;">SUPPORTER</h2>
-                <div class="sponsor-grid">
-                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item">
-                        <img src="Logos/company logo example.svg" alt="サポーター 1" width="180" height="72">
-                    </a>
-                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item">
-                        <img src="Logos/company logo example.svg" alt="サポーター 2" width="180" height="72">
-                    </a>
-                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item">
-                        <img src="Logos/company logo example.svg" alt="サポーター 3" width="180" height="72">
-                    </a>
-                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="sponsor-item">
-                        <img src="Logos/company logo example.svg" alt="サポーター 4" width="180" height="72">
-                    </a>
+                <div class="supporter-text-container">
+                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="supporter-text-item">サポーター企業 A</a>
+                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="supporter-text-item">サポーター企業 B</a>
+                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="supporter-text-item">サポーター企業 C</a>
+                    <a href="https://sponsor-website.com" target="_blank" rel="noopener noreferrer" class="supporter-text-item">サポーター企業 D</a>
                 </div>
             </div>
         </section>
