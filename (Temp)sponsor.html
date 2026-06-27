@@ -9,23 +9,25 @@
         /* 깃허브 서버 및 모바일 환경에서도 정렬이 무조건 유지되도록 인라인 스타일 보완 */
         .sponsor-grid-custom {
             display: flex !important;
-            flex-wrap: nowrap !important; /* 한 줄에 강제 고정 */
+            flex-wrap: wrap !important; /* 모바일과 PC 모두 유연하게 대응하기 위해 wrap으로 변경 */
             justify-content: center !important;
             gap: 20px !important;
             align-items: center !important;
             width: 100% !important;
         }
 
-        /* 골드: 한 줄에 2개 (정확히 50%씩 분할) */
+        /* 골드: PC에서는 한 줄에 2개 (정확히 50% 유연한 분할) */
         .gold-item-custom {
             width: calc(50% - 10px) !important;
             max-width: 500px !important;
+            height: 200px !important; /* PC 기준 높이 고정 */
         }
 
-        /* 실버: 한 줄에 3개 (정확히 33.33%씩 분할) */
+        /* 실버: PC에서는 한 줄에 3개 (정확히 33.33% 분할) */
         .silver-item-custom {
             width: calc(33.333% - 14px) !important;
             max-width: 250px !important;
+            height: 140px !important; /* PC 기준 높이 고정 */
         }
 
         /* 서포터: 텍스트 전용 스타일링 */
@@ -49,19 +51,28 @@
             color: #cd7f32 !important; /* 마우스 올렸을 때 서포터 고유 색상으로 변경 */
         }
 
-        /* 모바일 화면에서 로고가 너무 작아지는 것을 방지하기 위한 최소 높이 설정 */
+        /* ==========================================
+           모바일 화면 (768px 이하) 최적화 레이아웃
+        ========================================== */
         @media (max-width: 768px) {
             .sponsor-grid-custom {
-                flex-wrap: wrap !important; /* 모바일 기기 크기에서는 자연스럽게 떨어지도록 조절 */
+                gap: 15px !important; /* 모바일에서는 여백을 조금 좁게 */
             }
+            
+            /* 골드: 모바일에서는 안전하게 100% 1열 배치 (혹은 꽉 차게) */
             .gold-item-custom {
-                width: calc(50% - 10px) !important;
-                height: 140px !important;
+                width: 100% !important;
+                max-width: 340px !important;
+                height: 150px !important; /* 모바일 화면에 맞는 컴팩트한 높이 */
             }
+            
+            /* 실버: 모바일에서는 한 줄에 2개씩 배치 */
             .silver-item-custom {
-                width: calc(33.333% - 14px) !important;
-                height: 90px !important;
+                width: calc(50% - 8px) !important;
+                max-width: 180px !important;
+                height: 110px !important;
             }
+            
             .supporter-text-item {
                 font-size: 1rem !important;
             }
