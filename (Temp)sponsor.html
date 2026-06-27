@@ -55,29 +55,32 @@
            모바일 화면 (768px 이하) 최적화 레이아웃
         ========================================== */
         @media (max-width: 768px) {
-            .sponsor-grid-custom {
-                gap: 15px !important; /* 모바일에서는 여백을 조금 좁게 */
-            }
-            
-            /* 골드: 모바일에서는 안전하게 100% 1열 배치 (혹은 꽉 차게) */
-            .gold-item-custom {
-                width: 100% !important;
-                max-width: 340px !important;
-                height: 150px !important; /* 모바일 화면에 맞는 컴팩트한 높이 */
-            }
-            
-            /* 실버: 모바일에서는 한 줄에 2개씩 배치 */
-            .silver-item-custom {
-                width: calc(50% - 8px) !important;
-                max-width: 180px !important;
-                height: 110px !important;
-            }
-            
-            .supporter-text-item {
-                font-size: 1rem !important;
-            }
+        .sponsor-grid-custom {
+            flex-wrap: wrap !important; /* 모바일에서는 자연스럽게 아래로 떨어지도록 설정 */
+            gap: 15px !important;       /* 모바일 여백 좁힘 */
         }
-    </style>
+        
+        /* 골드: 모바일에서는 한 줄에 1개씩 꽉 차게 배치 */
+        .gold-item-custom {
+            width: 100% !important;     /* 너비 100% */
+            max-width: 340px !important; /* tournament.css와 맞춤 */
+            height: auto !important;     /* 높이는 이미지 비율에 맞게 자동 조절 */
+            padding: 15px !important;   /* 안쪽 여백 약간 줄임 */
+        }
+        
+        /* 실버: 모바일에서는 한 줄에 2개씩 배치 (calc 계산 수정) */
+        .silver-item-custom {
+            width: calc(50% - 8px) !important; /* 2열 배치 */
+            max-width: 180px !important;
+            height: auto !important;
+            padding: 10px !important;
+        }
+        
+        .supporter-text-item {
+            font-size: 1rem !important;
+        }
+    }
+</style>
 </head>
 <body class="body-css">
 
