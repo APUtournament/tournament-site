@@ -17,19 +17,16 @@
         }
 
         /* 골드: PC에서는 한 줄에 2개 (정확히 50% 유연한 분할) */
-        .gold-item-custom {
-            width: calc(50% - 10px) !important;
-            max-width: 500px !important;
-            height: 200px !important; /* PC 기준 높이 고정 */
-        }
+       .gold-item-custom {
+        width: calc(50% - 10px) !important; /* PC에서 완벽하게 2열 배치 */
+        max-width: 500px !important;
+    }
 
         /* 실버: PC에서는 한 줄에 3개 (정확히 33.33% 분할) */
         .silver-item-custom {
-            width: calc(33.333% - 14px) !important;
-            max-width: 250px !important;
-            height: 140px !important; /* PC 기준 높이 고정 */
-        }
-
+        width: calc(33.333% - 14px) !important;
+        max-width: 250px !important;
+    }
         /* 서포터: 텍스트 전용 스타일링 */
         .supporter-text-container {
             display: flex !important;
