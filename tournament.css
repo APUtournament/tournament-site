@@ -597,3 +597,25 @@ footer {
     font-size: 1.8rem;
     margin-bottom: 10px;
 }
+
+/* シルバースポンサーを必ず2列にする */
+.silver .sponsor-grid-custom {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 250px)) !important;
+    justify-content: center !important;
+    gap: 20px !important;
+}
+
+.silver .silver-item-custom {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box;
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+    .silver .sponsor-grid-custom {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
