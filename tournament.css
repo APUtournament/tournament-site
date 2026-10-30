@@ -598,24 +598,29 @@ footer {
     margin-bottom: 10px;
 }
 
-/* シルバースポンサーを必ず2列にする */
+/* シルバースポンサー：PC・スマホ共通で2列 */
 .silver .sponsor-grid-custom {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 250px)) !important;
     justify-content: center !important;
     gap: 20px !important;
+    width: 100%;
 }
 
 .silver .silver-item-custom {
     width: 100% !important;
-    max-width: none !important;
+    max-width: 250px !important;
+    height: 140px !important;
     box-sizing: border-box;
 }
 
-/* スマホ */
+/* スマホ対応 */
 @media (max-width: 768px) {
     .silver .sponsor-grid-custom {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
-}
 
+    .silver .silver-item-custom {
+        height: 120px !important;
+    }
+}
