@@ -487,11 +487,11 @@ footer {
         }
 
         .silver .sponsor-item {
-   　　　　　 width: calc(50% - 14px);
-   　　　　　 max-width: 250px;
-   　　　　　 height: 140px;
-   　　　　　 box-sizing: border-box;
-　　　　}
+            width: calc(50% - 14px);
+            max-width: 250px;
+            height: 140px;
+            box-sizing: border-box;
+        }
 
         .supporter .sponsor-item {
             width: 100%;
