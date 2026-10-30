@@ -487,10 +487,11 @@ footer {
         }
 
         .silver .sponsor-item {
-            width: 100%;
-            max-width: 250px;
-            height: 140px;
-        }
+   　　　　　 width: calc(25% - 15px);
+   　　　　　 max-width: 250px;
+   　　　　　 height: 140px;
+   　　　　　 box-sizing: border-box;
+　　　　}
 
         .supporter .sponsor-item {
             width: 100%;
@@ -532,7 +533,7 @@ footer {
 }
 
 .silver-item-custom {
-    width: calc(33.333% - 14px) !important;
+    width: calc(25% - 15px) !important;
     max-width: 250px !important;
 }
 
