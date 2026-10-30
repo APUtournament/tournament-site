@@ -624,3 +624,19 @@ footer {
         height: 120px !important;
     }
 }
+/* REIGNITEロゴ専用調整 */
+.reignite-logo {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 110px !important;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+.silver .silver-item-custom {
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
